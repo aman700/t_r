@@ -630,9 +630,9 @@ def main():
             
             st.markdown("""
             ### 🎯 Detection Capabilities
-            # - 🏍️ **Motorcycle detection** using YOLO models
+            - 🏍️ **Motorcycle detection**
             - ⛑️ **Helmet/No-helmet classification**  
-            - 🔢 **Number plate extraction** (with API)
+            - 🔢 **Number plate extraction**
             - 🚨 **Violation detection**:
               - No helmet usage
               - Triple seating
@@ -750,11 +750,15 @@ def main():
     
     # Footer
     st.markdown("---")
+    # st.markdown(
+    #     "**Helmet Violation Detection System** | "
+    #     "Built with Streamlit, YOLO & Groq API | "
+    #     "Deployed on Streamlit Cloud 🚀"
+    # )
     st.markdown(
-        "**Helmet Violation Detection System** | "
-        "Built with Streamlit, YOLO & Groq API | "
-        "Deployed on Streamlit Cloud 🚀"
+        "**Helmet Violation Detection System**"
     )
+
 
 if __name__ == "__main__":
     main()
