@@ -552,7 +552,7 @@ def main():
             st.video(uploaded_file)
             
             # Process button
-            if st.button("🚀 Start Violation Detection", type="primary", use_container_width=True):
+            if st.button("🚀 Start Violation Detection", type="primary", width="stretch"):
                 if not st.session_state.models_loaded:
                     st.error("❌ Models not loaded. Please load models first.")
                     return
