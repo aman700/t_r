@@ -85,20 +85,24 @@ try:
     # First try Streamlit secrets (for cloud deployment)
     api_key = st.secrets["GROQ_API_KEY"]
     client = Groq(api_key=api_key)
-    st.sidebar.success("✅ Groq API: Connected via Streamlit Secrets")
+    # st.sidebar.success("✅ Groq API: Connected via Streamlit Secrets")
+    st.sidebar.success("✅ API: Connected via Streamlit")
 except (KeyError, FileNotFoundError):
     try:
         # Fall back to .env file (for local development)
         api_key = os.getenv("GROQ_API_KEY")
         if api_key:
             client = Groq(api_key=api_key)
-            st.sidebar.success("✅ Groq API: Connected via .env file")
+            # st.sidebar.success("✅ Groq API: Connected via .env file")
+            st.sidebar.success("✅ API: Connected via file")
         else:
             client = None
-            st.sidebar.warning("⚠️ Groq API: Not configured")
+            # st.sidebar.warning("⚠️ Groq API: Not configured")
+            st.sidebar.warning("⚠️ API: Not configured")
     except:
         client = None
-        st.sidebar.warning("⚠️ Groq API: Not configured")
+        # st.sidebar.warning("⚠️ Groq API: Not configured")
+        st.sidebar.warning("⚠️ API: Not configured")
 
 # Text Extraction Function
 def extract_text_from_image(image_array):
@@ -486,11 +490,13 @@ def main():
     
     # Groq API status
     if client:
-        st.sidebar.success("✅ Groq API: Connected")
+        # st.sidebar.success("✅ Groq API: Connected")
+        st.sidebar.success("✅ API: Connected")
     else:
-        st.sidebar.warning("⚠️ Groq API: Not configured")
-        st.sidebar.info("Add GROQ_API_KEY to .env file or Streamlit secrets")
-    
+        # st.sidebar.warning("⚠️ Groq API: Not configured")
+        st.sidebar.warning("⚠️ API: Not configured")
+        # st.sidebar.info("Add GROQ_API_KEY to .env file or Streamlit secrets")
+        st.sidebar.info("Add API_KEY to file or Streamlit ")
     # Model loading section
     st.sidebar.markdown("### Model Status")
     
