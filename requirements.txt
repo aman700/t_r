@@ -6,5 +6,5 @@ numpy>=1.24.0
 Pillow>=10.0.0
 groq>=0.3.0
 python-dotenv>=1.0.0
-dotenv
 opencv-python-headless
+dotenv
