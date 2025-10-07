@@ -630,9 +630,9 @@ def main():
             
             st.markdown("""
             ### 🎯 Detection Capabilities
-            - 🏍️ **Motorcycle detection** using YOLO models
+            # - 🏍️ **Motorcycle detection** using YOLO models
             - ⛑️ **Helmet/No-helmet classification**  
-            - 🔢 **Number plate extraction** (with Groq API)
+            - 🔢 **Number plate extraction** (with API)
             - 🚨 **Violation detection**:
               - No helmet usage
               - Triple seating
