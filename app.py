@@ -151,7 +151,7 @@ def load_models():
         # Try to load COCO model first (this should always work)
         try:
             coco_model = YOLO("yolo11n.pt")
-            st.success("✅ COCO model (yolo11n.pt) loaded successfully!")
+            # st.success("✅ COCO model (yolo11n.pt) loaded successfully!")
             st.session_state.coco_model = coco_model
         except Exception as e:
             st.error(f"❌ Failed to load COCO model: {e}")
@@ -173,7 +173,7 @@ def load_models():
                 # Check if file exists or try to load directly
                 custom_model = YOLO(path)
                 loaded_path = path
-                st.success(f"✅ Custom model loaded from: {path}")
+                # st.success(f"✅ Custom model loaded from: {path}")
                 break
             except Exception as e:
                 st.warning(f"⚠️ Could not load from {path}: {str(e)[:100]}...")
@@ -188,8 +188,8 @@ def load_models():
         st.session_state.models_loaded = True
         
         st.success(f"🎉 All models loaded successfully!")
-        st.info(f"Custom model: {loaded_path}")
-        st.info(f"COCO model: yolo11n.pt")
+        # st.info(f"Custom model: {loaded_path}")
+        # st.info(f"COCO model: yolo11n.pt")
         
         return True
         
